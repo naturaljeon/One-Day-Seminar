@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko" class="nojs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>보험설계사 원데이 자동화 세미나 — 고객 DB 하나로 제안서부터 문자까지</title>
+<meta name="description" content="옵시디언으로 보험상품·고객 DB를 구축하고, 상담 녹음 자동 등록과 맞춤 제안서 출력, 유형별 문자 발송까지 자동화하는 하루 실습 세미나. 2026년 7월 11일(토), 한성대학교 컨퍼런스홀.">
+<meta property="og:title" content="보험설계사 원데이 자동화 세미나">
+<meta property="og:description" content="하루 8시간 실습으로 흩어진 고객 정보를 영업 시스템으로. 2026.7.11(토) 한성대학교 컨퍼런스홀.">
+<meta property="og:type" content="website">
+<script>document.documentElement.className='js';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--nv950:#070f20;--nv900:#0b1f3a;--g5:#c9a24b;--g4:#e7c878;--g3:#f3dca0;--mut:#475569;--maxw:1320px}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;background:#070f20;color:#0f172a}
+a{text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;width:100%}
+.sec{padding:clamp(64px,9vh,140px) clamp(24px,6vw,90px);position:relative}
+.eyebrow{font-size:clamp(12px,1vw,15px);letter-spacing:2px;font-weight:500;text-transform:uppercase}
+h1,h2,h3{line-height:1.25}
+.h2{font-size:clamp(1.7rem,3.4vw,3rem);font-weight:900}
+.body{font-size:clamp(.98rem,1.1vw,1.2rem);line-height:1.8}
+.rv{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+@keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-34px) scale(1.16)}100%{transform:translate(0,0) scale(1)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(201,162,75,.55)}50%{box-shadow:0 0 0 12px rgba(201,162,75,0)}}
+.gold-text{background:linear-gradient(100deg,#c9a24b,#f3dca0,#c9a24b);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 4.5s linear infinite}
+.gold-grad{background:linear-gradient(120deg,#c9a24b,#f3dca0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta{position:relative;overflow:hidden;display:inline-block;background:linear-gradient(120deg,#c9a24b,#e7c878);color:#070f20;font-weight:700;border:none;border-radius:999px;cursor:pointer;transition:transform .25s,box-shadow .25s;font-family:inherit}
+.cta:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 16px 44px rgba(201,162,75,.45)}
+.cta::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(110deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);transition:left .6s}
+.cta:hover::after{left:130%}
+.ghost{display:inline-block;color:#dbe4f0;border:1px solid rgba(255,255,255,.3);border-radius:999px;transition:background .2s}
+.ghost:hover{background:rgba(255,255,255,.08)}
+.spot{position:relative;overflow:hidden}
+.spot::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle 200px at var(--cx,50%) var(--cy,50%),rgba(231,200,120,.16),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.spot:hover::before{opacity:1}
+.pcard{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:clamp(22px,2.4vw,38px);transition:transform .3s,border-color .3s,background .3s}
+.pcard:hover{transform:translateY(-6px);border-color:rgba(201,162,75,.6);background:rgba(201,162,75,.06)}
+.dcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:clamp(20px,2vw,30px);transition:transform .3s}
+.dcard:hover{transform:translateY(-6px)}
+.paincard{display:flex;gap:clamp(14px,1.6vw,26px);align-items:flex-start;background:#f8fafc;border:1px solid #eef2f7;border-radius:18px;padding:clamp(20px,2vw,32px);transition:transform .3s,box-shadow .3s}
+.paincard:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,31,58,.08)}
+.hcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:clamp(16px,1.6vw,22px);text-align:left;transition:transform .3s,border-color .3s;display:block}
+.hcard:hover{transform:translateY(-4px);border-color:rgba(201,162,75,.5)}
+details{border-bottom:1px solid #e2e8f0;padding:clamp(16px,1.6vw,24px) 0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:clamp(1rem,1.3vw,1.25rem);font-weight:500;color:var(--nv900)}
+summary::-webkit-details-marker{display:none}
+.plus{color:var(--g5);font-size:1.8em;transition:transform .3s;line-height:1}
+details[open] .plus{transform:rotate(135deg)}
+.statn{font-size:clamp(2.8rem,5.4vw,5rem);font-weight:900;line-height:1}
+.stepn{font-size:clamp(3rem,5vw,5rem);font-weight:900;line-height:.9}
+.grid-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:clamp(10px,1.4vw,22px);max-width:880px;margin:clamp(32px,4.5vh,56px) auto 0}
+.grid-hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(10px,1.2vw,18px);max-width:920px;margin:clamp(20px,3vh,34px) auto 0}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,1.6vw,24px);margin-top:clamp(28px,4vh,48px)}
+.tl{position:relative;padding-left:clamp(40px,4vw,64px)}
+.tl-track{position:absolute;left:clamp(8px,.9vw,14px);top:8px;bottom:8px;width:4px;background:rgba(201,162,75,.18);border-radius:4px}
+.tl-fill{position:absolute;left:clamp(8px,.9vw,14px);top:8px;width:4px;height:100%;background:linear-gradient(#c9a24b,#f3dca0);border-radius:4px;box-shadow:0 0 18px rgba(231,200,120,.6)}
+.js .tl-fill{height:0}
+.tl-item{position:relative;margin-bottom:clamp(26px,3vh,44px);opacity:1;transition:opacity .5s}
+.js .tl-item{opacity:.3}
+.js .tl-item.on{opacity:1}
+.tl-dot{position:absolute;left:calc(-1*clamp(40px,4vw,64px) + clamp(2px,.3vw,5px));top:4px;width:clamp(18px,1.8vw,26px);height:clamp(18px,1.8vw,26px);border-radius:50%;background:var(--g5);border:4px solid #fff;transition:background .4s,transform .4s,box-shadow .4s}
+.js .tl-dot{background:#cbd5e1}
+.js .tl-item.on .tl-dot{background:var(--g5);transform:scale(1.2)}
+.tl-item.now .tl-dot{animation:pulse 1.6s infinite;box-shadow:0 0 24px rgba(231,200,120,.8)}
+.tltime{font-size:clamp(1.1rem,1.5vw,1.6rem);font-weight:900;letter-spacing:1px}
+.btn-replay{font-family:inherit;font-size:clamp(13px,1vw,15px);color:var(--nv900);background:#fff;border:1px solid #d8b86a;border-radius:999px;padding:10px 18px;cursor:pointer;transition:background .2s}
+.btn-replay:hover{background:#faf3e2}
+.nojs .btn-replay{display:none}
+iframe.jf{width:100%;border:0;display:block;background:#fff}
+#flash{position:fixed;inset:0;pointer-events:none;z-index:60;background:radial-gradient(circle 280px at var(--mx,50%) var(--my,50%),rgba(231,200,120,.20),rgba(201,162,75,.07) 42%,transparent 70%);mix-blend-mode:screen;transition:background .06s linear;opacity:0}
+.js #flash{opacity:1}
+.dark{background:var(--nv950);position:relative;overflow:hidden}
+.light{background:#fff}
+@media(max-width:760px){:root{--maxw:100%}}
+</style>
+</head>
+<body>
+<div id="flash"></div>
+
+<header class="dark" style="z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,5vw,60px)">
+  <span style="font-size:clamp(11px,.9vw,13px);letter-spacing:3px;color:#dbe4f0">ONE-DAY SEMINAR</span>
+  <a href="#apply" class="cta" style="font-size:clamp(13px,1vw,15px);padding:10px clamp(18px,2vw,26px)">사전 신청</a>
+</header>
+
+<section class="dark" id="hero" style="min-height:92vh;display:flex;align-items:center">
+  <div class="blob" id="b1" style="width:38vw;height:38vw;max-width:560px;max-height:560px;background:#c9a24b;opacity:.42;top:-8vw;left:-6vw;animation:drift 12s ease-in-out infinite"></div>
+  <div class="blob" id="b2" style="width:36vw;height:36vw;max-width:520px;max-height:520px;background:#1d4e89;opacity:.5;bottom:-10vw;right:-6vw;animation:drift 14s ease-in-out infinite reverse"></div>
+  <div class="blob" id="b3" style="width:24vw;height:24vw;max-width:340px;max-height:340px;background:#7a5cc0;opacity:.3;top:34%;right:26%;animation:drift 9s ease-in-out infinite"></div>
+  <div class="wrap sec" style="text-align:center;position:relative;z-index:2;padding-top:clamp(40px,5vh,80px);padding-bottom:clamp(40px,5vh,80px)">
+    <p class="eyebrow rv" style="color:var(--g4)">보험설계사를 위한 원데이 자동화 세미나</p>
+    <h1 class="rv" style="font-weight:900;font-size:clamp(2.5rem,6vw,5.2rem);margin-top:clamp(14px,2vh,26px);color:#fff">흩어진 고객 정보를,<br>하루 만에 <span class="gold-text">영업 시스템</span>으로.</h1>
+    <p class="rv body" style="color:#c3cfe0;max-width:760px;margin:clamp(18px,2.5vh,30px) auto 0">옵시디언으로 보험상품·고객 DB를 구축하고, 상담 녹음 자동 등록부터 맞춤 제안서 출력, 유형별 문자 발송까지 — 하루 8시간 실습으로 직접 만듭니다.</p>
+    <div class="rv" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:clamp(26px,3.5vh,40px)">
+      <a href="#apply" class="cta" style="font-size:clamp(15px,1.3vw,19px);padding:clamp(15px,1.6vw,20px) clamp(28px,3vw,42px)">세미나 신청하기</a>
+      <a href="#cur" class="ghost" style="font-size:clamp(15px,1.3vw,19px);padding:clamp(15px,1.6vw,20px) clamp(22px,2.4vw,34px)">커리큘럼 보기 ↓</a>
+    </div>
+    <div class="rv grid-stats">
+      <div style="text-align:center"><div class="statn gold-grad cnt" data-t="8">8</div><div style="font-size:clamp(.8rem,1vw,1.05rem);color:#dbe4f0;font-weight:700;margin-top:6px">시간</div><div style="font-size:clamp(.7rem,.85vw,.9rem);color:#7e8ca0;margin-top:2px">몰입 실습</div></div>
+      <div style="text-align:center"><div class="statn gold-grad cnt" data-t="3">3</div><div style="font-size:clamp(.8rem,1vw,1.05rem);color:#dbe4f0;font-weight:700;margin-top:6px">파트</div><div style="font-size:clamp(.7rem,.85vw,.9rem);color:#7e8ca0;margin-top:2px">순환 설계</div></div>
+      <div style="text-align:center"><div class="statn gold-grad cnt" data-t="3">3</div><div style="font-size:clamp(.8rem,1vw,1.05rem);color:#dbe4f0;font-weight:700;margin-top:6px">결과물</div><div style="font-size:clamp(.7rem,.85vw,.9rem);color:#7e8ca0;margin-top:2px">노트북에</div></div>
+      <div style="text-align:center"><div class="statn gold-grad cnt" data-t="70">70</div><div style="font-size:clamp(.8rem,1vw,1.05rem);color:#dbe4f0;font-weight:700;margin-top:6px">명</div><div style="font-size:clamp(.7rem,.85vw,.9rem);color:#7e8ca0;margin-top:2px">선착순 마감</div></div>
+    </div>
+    <div class="rv grid-hero">
+      <a href="#cur" class="hcard spot"><div style="position:relative;z-index:1"><div style="color:#fff;font-weight:700;font-size:clamp(1rem,1.2vw,1.2rem)">Part 1 · 영업 DB</div><p style="color:#9fb0c6;font-size:clamp(.82rem,.95vw,.98rem);margin-top:6px">검색 한 번에 고객 맥락</p></div></a>
+      <a href="#cur" class="hcard spot"><div style="position:relative;z-index:1"><div style="color:#fff;font-weight:700;font-size:clamp(1rem,1.2vw,1.2rem)">Part 2 · 자동 등록</div><p style="color:#9fb0c6;font-size:clamp(.82rem,.95vw,.98rem);margin-top:6px">녹음 → 텍스트 → DB</p></div></a>
+      <a href="#cur" class="hcard spot"><div style="position:relative;z-index:1"><div style="color:#fff;font-weight:700;font-size:clamp(1rem,1.2vw,1.2rem)">Part 3 · 서비스화</div><p style="color:#9fb0c6;font-size:clamp(.82rem,.95vw,.98rem);margin-top:6px">제안서·문자 자동 발송</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="light sec"><div class="wrap">
+  <p class="eyebrow rv" style="color:var(--g5)">이런 하루, 익숙하지 않으세요?</p>
+  <h2 class="h2 rv" style="color:var(--nv900);margin-top:14px">영업이 아니라 '정리'에<br>하루를 다 쓰고 있다면</h2>
+  <div style="margin-top:clamp(28px,4vh,48px);display:grid;gap:16px">
+    <div class="paincard rv"><span class="statn gold-grad" style="font-size:clamp(2.2rem,3.6vw,3.4rem)">01</span><div><h3 style="font-size:clamp(1.15rem,1.6vw,1.6rem);font-weight:700;color:var(--nv900)">고객 정보가 사방에 흩어져 있다</h3><p class="body" style="color:var(--mut);margin-top:8px">수첩, 엑셀, 카톡, 명함첩… 고객 한 명의 정보를 찾으려면 네 군데를 뒤져야 합니다.</p></div></div>
+    <div class="paincard rv"><span class="statn gold-grad" style="font-size:clamp(2.2rem,3.6vw,3.4rem)">02</span><div><h3 style="font-size:clamp(1.15rem,1.6vw,1.6rem);font-weight:700;color:var(--nv900)">상담 내용이 머리와 메모장에만 남는다</h3><p class="body" style="color:var(--mut);margin-top:8px">통화·상담이 끝나면 핵심 내용은 기억에만 남습니다. 정리해서 입력하려면 별도 시간이 들고, 그 시간은 늘 부족합니다.</p></div></div>
+    <div class="paincard rv"><span class="statn gold-grad" style="font-size:clamp(2.2rem,3.6vw,3.4rem)">03</span><div><h3 style="font-size:clamp(1.15rem,1.6vw,1.6rem);font-weight:700;color:var(--nv900)">누구에게 무엇을 보내야 할지 막막하다</h3><p class="body" style="color:var(--mut);margin-top:8px">갱신 시기 고객, 자녀가 있는 고객, 은퇴 준비 고객… 골라내서 일일이 문자를 보내다 하루가 끝납니다.</p></div></div>
+  </div>
+  <p class="rv" style="color:var(--nv900);font-weight:900;margin-top:clamp(24px,3vh,40px);font-size:clamp(1.3rem,2.4vw,2.2rem)">이 세 가지를, <span class="gold-text">하루 만에 자동화</span>합니다.</p>
+</div></section>
+
+<section class="dark"><div class="blob" style="width:30vw;height:30vw;max-width:420px;max-height:420px;background:#c9a24b;opacity:.15;top:-8vw;right:-6vw"></div>
+  <div class="wrap sec" style="position:relative;z-index:2">
+  <p class="eyebrow rv" style="color:var(--g4)">하루의 3단계</p>
+  <h2 class="h2 rv" style="color:#fff;margin-top:14px">강의가 아니라, 결과물을 가져가는 하루</h2>
+  <p class="rv body" style="color:#9fb0c6;margin-top:14px;max-width:760px">세 가지 결과물을 직접 만들어 노트북에 담아 갑니다. 앞에서 만든 것을 뒤에서 그대로 이어 씁니다.</p>
+  <div class="grid-cards">
+    <div class="pcard spot rv"><div style="position:relative;z-index:1"><span class="stepn gold-grad">01</span><div style="font-size:clamp(.7rem,.85vw,.85rem);letter-spacing:1px;color:#7e8ca0;margin-top:10px">Part 1 · 오전</div><h3 style="color:#fff;font-size:clamp(1.15rem,1.5vw,1.5rem);font-weight:700;margin-top:6px">옵시디언+클로드로 '나만의 영업 DB' 만들기</h3><p style="color:#9fb0c6;font-size:clamp(.9rem,1vw,1.05rem);line-height:1.75;margin-top:14px">프롬프트·프로젝트·스킬·인스트럭션 세팅을 직접 다루면서, 고객명을 입력하면 가입 이력·갱신일·가족 구성이 한 번에 나오는 영업 데이터베이스를 구축합니다.</p><ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:9px"><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>보험상품 DB: 상품·보장·조건을 속성으로 정리</li><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>고객 DB: 가입 이력, 갱신일, 가족 구성, 유형 태그</li><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>엑셀·수첩에 흩어진 기존 데이터 옮겨오기</li></ul></div></div>
+    <div class="pcard spot rv"><div style="position:relative;z-index:1"><span class="stepn gold-grad">02</span><div style="font-size:clamp(.7rem,.85vw,.85rem);letter-spacing:1px;color:#7e8ca0;margin-top:10px">Part 2 · 오후 1부</div><h3 style="color:#fff;font-size:clamp(1.15rem,1.5vw,1.5rem);font-weight:700;margin-top:6px">상담 녹음 → 텍스트 변환 → 고객 DB 자동 등록</h3><p style="color:#9fb0c6;font-size:clamp(.9rem,1vw,1.05rem);line-height:1.75;margin-top:14px">커넥터·MCP로 외부 파일을 연결합니다. 상담 녹음을 Whisper로 텍스트화하고, 핵심 정보를 뽑아 고객 DB에 자동으로 기록하는 파이프라인을 만듭니다.</p><ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:9px"><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>녹음 파일을 텍스트로 자동 전사</li><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>상담 핵심 정보 추출·정규화</li><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>올바른 고객 레코드에 자동 등록</li></ul></div></div>
+    <div class="pcard spot rv"><div style="position:relative;z-index:1"><span class="stepn gold-grad">03</span><div style="font-size:clamp(.7rem,.85vw,.85rem);letter-spacing:1px;color:#7e8ca0;margin-top:10px">Part 3 · 오후 2부</div><h3 style="color:#fff;font-size:clamp(1.15rem,1.5vw,1.5rem);font-weight:700;margin-top:6px">맞춤 제안서 자동 생성 + 유형별 메일·문자 발송</h3><p style="color:#9fb0c6;font-size:clamp(.9rem,1vw,1.05rem);line-height:1.75;margin-top:14px">Claude Cowork와 Loop process(오케스트레이터-워커-QA)로, 고객을 선택하면 제안서가 인쇄 가능한 형태로 생성되고 유형별 고객에게 맞춤 메시지를 보낼 준비까지 완료합니다.</p><ul style="list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:9px"><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>고객 조건 → 상품 조합 제안서 자동 생성</li><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>'갱신 임박', '자녀 보험 미가입' 등 유형별 추출</li><li style="color:#dbe4f0;font-size:clamp(.88rem,1vw,1.02rem)"><span style="color:var(--g5);margin-right:9px;font-weight:700">✓</span>유형별 맞춤 메일·문자 발송 준비까지</li></ul></div></div>
+  </div>
+</div></section>
+
+<section class="light sec" id="cur"><div class="wrap">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px">
+    <div><p class="eyebrow rv" style="color:var(--g5)">하루의 흐름</p><h2 class="h2 rv" style="color:var(--nv900);margin-top:14px">오전에 DB를 구축하고,<br>오후엔 자동화를 완성합니다</h2></div>
+    <button class="btn-replay rv" id="replay">▶ 하루 흐름 다시 보기</button>
+  </div>
+  <div class="tl rv" id="tl" style="margin-top:clamp(34px,5vh,56px)">
+    <div class="tl-track"></div><div class="tl-fill" id="tlfill"></div>
+    <div class="tl-item" data-p="0"><span class="tl-dot"></span><p class="tltime gold-grad">09:30</p><h3 style="color:var(--nv900);font-size:clamp(1.05rem,1.4vw,1.45rem);font-weight:700;margin-top:4px">체크인 & 환경 세팅</h3><p style="color:var(--mut);font-size:clamp(.88rem,1vw,1.05rem);margin-top:4px">클로드·옵시디언 세팅, 실습 자료 배포</p></div>
+    <div class="tl-item" data-p="16"><span class="tl-dot"></span><p class="tltime gold-grad">10:00</p><h3 style="color:var(--nv900);font-size:clamp(1.05rem,1.4vw,1.45rem);font-weight:700;margin-top:4px">Part 1 — 영업 DB 구축</h3><p style="color:var(--mut);font-size:clamp(.88rem,1vw,1.05rem);margin-top:4px">상품 DB와 고객 DB를 직접 만들어봅니다</p></div>
+    <div class="tl-item" data-p="38"><span class="tl-dot"></span><p class="tltime gold-grad">12:30</p><h3 style="color:var(--nv900);font-size:clamp(1.05rem,1.4vw,1.45rem);font-weight:700;margin-top:4px">점심 식사</h3></div>
+    <div class="tl-item" data-p="52"><span class="tl-dot"></span><p class="tltime gold-grad">13:30</p><h3 style="color:var(--nv900);font-size:clamp(1.05rem,1.4vw,1.45rem);font-weight:700;margin-top:4px">Part 2 — 상담 녹음 자동 등록</h3><p style="color:var(--mut);font-size:clamp(.88rem,1vw,1.05rem);margin-top:4px">녹음 → 텍스트 → 고객 DB 등록까지</p></div>
+    <div class="tl-item" data-p="74"><span class="tl-dot"></span><p class="tltime gold-grad">15:30</p><h3 style="color:var(--nv900);font-size:clamp(1.05rem,1.4vw,1.45rem);font-weight:700;margin-top:4px">Part 3 — 제안서·발송 자동화</h3><p style="color:var(--mut);font-size:clamp(.88rem,1vw,1.05rem);margin-top:4px">맞춤 제안서 생성과 유형별 메시지 발송</p></div>
+    <div class="tl-item" data-p="100"><span class="tl-dot"></span><p class="tltime gold-grad">17:30</p><h3 style="color:var(--nv900);font-size:clamp(1.05rem,1.4vw,1.45rem);font-weight:700;margin-top:4px">Q&A & 내 데이터 적용 상담</h3><p style="color:var(--mut);font-size:clamp(.88rem,1vw,1.05rem);margin-top:4px">내일부터 현장에서 바로 쓸 수 있게</p></div>
+  </div>
+</div></section>
+
+<section class="dark"><div class="blob" style="width:32vw;height:32vw;max-width:440px;max-height:440px;background:#1d4e89;opacity:.22;bottom:-8vw;left:-6vw"></div>
+  <div class="wrap sec" style="position:relative;z-index:2">
+  <p class="eyebrow rv" style="color:var(--g4)">이 세미나가 다른 이유</p>
+  <h2 class="h2 rv" style="color:#fff;margin-top:14px">듣고 잊는 강의가 아니라,<br>남는 시스템을 만듭니다</h2>
+  <div class="grid-cards">
+    <div class="dcard spot rv"><div style="position:relative;z-index:1"><h3 style="color:var(--g4);font-size:clamp(1.1rem,1.4vw,1.4rem);font-weight:700">코딩 경험이 없어도 됩니다</h3><p style="color:#9fb0c6;font-size:clamp(.9rem,1vw,1.05rem);line-height:1.75;margin-top:10px">프로그래밍이 아니라 도구 사용법을 배웁니다. 엑셀을 써봤다면 충분합니다.</p></div></div>
+    <div class="dcard spot rv"><div style="position:relative;z-index:1"><h3 style="color:var(--g4);font-size:clamp(1.1rem,1.4vw,1.4rem);font-weight:700">내 노트북으로, 내 손으로</h3><p style="color:#9fb0c6;font-size:clamp(.9rem,1vw,1.05rem);line-height:1.75;margin-top:10px">보고 듣는 강의가 아닙니다. 하루 종일 직접 만들고, 만든 것을 그대로 가져갑니다.</p></div></div>
+    <div class="dcard spot rv"><div style="position:relative;z-index:1"><h3 style="color:var(--g4);font-size:clamp(1.1rem,1.4vw,1.4rem);font-weight:700">한 명도 놓치지 않는 운영</h3><p style="color:#9fb0c6;font-size:clamp(.9rem,1vw,1.05rem);line-height:1.75;margin-top:10px">막히는 순간 바로 옆에서 도와드립니다. 보조 진행 인력과 함께 한 명도 건너뛰지 않습니다.</p></div></div>
+    <div class="dcard spot rv"><div style="position:relative;z-index:1"><h3 style="color:var(--g4);font-size:clamp(1.1rem,1.4vw,1.4rem);font-weight:700">세미나가 끝나면 시스템이 남습니다</h3><p style="color:#9fb0c6;font-size:clamp(.9rem,1vw,1.05rem);line-height:1.75;margin-top:10px">강의 자료가 아니라, 다음 날 출근해서 바로 쓰는 나만의 영업 시스템을 들고 갑니다.</p></div></div>
+  </div>
+</div></section>
+
+<section class="light sec"><div class="wrap" style="max-width:860px">
+  <p class="eyebrow rv" style="color:var(--g5)">FAQ</p>
+  <h2 class="h2 rv" style="color:var(--nv900);margin-top:14px">자주 묻는 질문</h2>
+  <div class="rv" style="margin-top:clamp(18px,2.5vh,30px)">
+    <details><summary>컴퓨터를 잘 다루지 못하는데 따라갈 수 있나요?<span class="plus">+</span></summary><p style="color:var(--mut);font-size:clamp(.95rem,1.1vw,1.15rem);line-height:1.8;margin-top:14px">네. 엑셀로 고객 명단을 정리해본 정도면 충분합니다. 모든 과정을 화면 그대로 따라 하며, 막히면 현장에서 바로 도와드립니다.</p></details>
+    <details><summary>옵시디언이 뭔가요? 유료인가요?<span class="plus">+</span></summary><p style="color:var(--mut);font-size:clamp(.95rem,1.1vw,1.15rem);line-height:1.8;margin-top:14px">옵시디언(Obsidian)은 무료 노트·데이터베이스 프로그램입니다. 모든 데이터가 내 컴퓨터에 파일로 저장되어, 고객 정보를 외부 서버에 올리지 않고 관리할 수 있습니다.</p></details>
+    <details><summary>상담 녹음을 다뤄도 개인정보가 안전한가요?<span class="plus">+</span></summary><p style="color:var(--mut);font-size:clamp(.95rem,1.1vw,1.15rem);line-height:1.8;margin-top:14px">세미나 실습은 가상의 예시 녹음·데이터로 진행합니다. 등록은 본인 컴퓨터의 옵시디언에 저장되는 구조라, 실제 적용 시에도 개인정보를 외부에 맡기지 않습니다.</p></details>
+    <details><summary>무엇을 준비해야 하나요?<span class="plus">+</span></summary><p style="color:var(--mut);font-size:clamp(.95rem,1.1vw,1.15rem);line-height:1.8;margin-top:14px">노트북 한 대면 됩니다(Windows/Mac 모두 가능). 평소 쓰시는 고객 명단 엑셀이 있다면 가져오세요. 마지막 상담 시간에 내 데이터 기준으로 적용을 도와드립니다.</p></details>
+    <details><summary>하루 만에 정말 다 만들 수 있나요?<span class="plus">+</span></summary><p style="color:var(--mut);font-size:clamp(.95rem,1.1vw,1.15rem);line-height:1.8;margin-top:14px">하루 전체를 실습으로 구성했기 때문에 가능합니다. DB 구축(Part 1) → 녹음 자동 등록(Part 2) → 제안서·발송 자동화(Part 3) 순으로 이어지며, 앞 파트에서 만든 결과물을 다음 파트에서 그대로 재료로 씁니다. 단, 완성도는 당일 진행 속도와 본인 환경에 따라 달라질 수 있습니다.</p></details>
+  </div>
+</div></section>
+
+<section class="dark sec" id="apply"><div class="blob" style="width:34vw;height:34vw;max-width:460px;max-height:460px;background:#c9a24b;opacity:.18;top:-10vw;left:50%;margin-left:-17vw;animation:drift 10s ease-in-out infinite"></div>
+  <div class="wrap" style="position:relative;z-index:2;max-width:780px;text-align:center">
+    <p class="eyebrow rv" style="color:var(--g4)">신청 안내</p>
+    <h2 class="rv" style="font-size:clamp(2rem,4vw,3.4rem);font-weight:900;color:#fff;margin-top:14px">내일의 영업이 달라지는 하루</h2>
+    <div class="rv" style="max-width:520px;margin:clamp(24px,3.5vh,40px) auto 0;text-align:left">
+      <div style="display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:14px;margin-bottom:14px"><span style="color:var(--g4);font-weight:500;font-size:clamp(.95rem,1.1vw,1.15rem)">일시</span><span style="color:#dbe4f0;font-size:clamp(.95rem,1.1vw,1.15rem);text-align:right;font-weight:500">2026년 7월 11일 (토) 09:30–18:00</span></div>
+      <div style="display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:14px;margin-bottom:14px"><span style="color:var(--g4);font-weight:500;font-size:clamp(.95rem,1.1vw,1.15rem)">장소</span><span style="color:#dbe4f0;font-size:clamp(.95rem,1.1vw,1.15rem);text-align:right;font-weight:500">한성대학교 컨퍼런스홀</span></div>
+      <div style="display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:14px;margin-bottom:14px"><span style="color:var(--g4);font-weight:500;font-size:clamp(.95rem,1.1vw,1.15rem)">참가비</span><span style="color:#dbe4f0;font-size:clamp(.95rem,1.1vw,1.15rem);text-align:right;font-weight:500">570,000원</span></div>
+      <div style="display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:14px;margin-bottom:14px"><span style="color:var(--g4);font-weight:500;font-size:clamp(.95rem,1.1vw,1.15rem)">정원</span><span style="color:#dbe4f0;font-size:clamp(.95rem,1.1vw,1.15rem);text-align:right;font-weight:500">선착순 70명 (마감 시 조기 종료)</span></div>
+    </div>
+    <div class="rv" style="margin-top:clamp(24px,3.5vh,40px);background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.4)">
+      <iframe class="jf" id="jotform" title="보험설계사 원데이 자동화 세미나 사전 신청" src="https://form.jotform.com/261632446737058" height="1400" scrolling="no" allow="geolocation; microphone; camera; fullscreen; payment"></iframe>
+    </div>
+    <p class="rv" style="color:#8ea0b8;font-size:clamp(12px,1vw,14px);margin-top:14px">폼이 보이지 않으면 <a href="https://form.jotform.com/261632446737058" target="_blank" rel="noopener" style="color:var(--g4);text-decoration:underline">여기서 새 탭으로 신청</a>하실 수 있습니다. 정원은 선착순 70명으로, 마감 시 조기 종료됩니다.</p>
+  </div>
+</section>
+
+<footer class="dark" style="border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:24px;color:#64748b;font-size:clamp(12px,1vw,14px)">© 2026 보험설계사 원데이 자동화 세미나. All rights reserved.</footer>
+
+<script>
+(function(){
+try{
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+var sbox=document.querySelector('.grid-stats'),cdone=false;
+var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!cdone){cdone=true;sbox.querySelectorAll('.cnt').forEach(function(el){var t=+el.getAttribute('data-t'),v=0,st=Math.max(1,t/28);el.textContent='0';var iv=setInterval(function(){v+=st;if(v>=t){v=t;clearInterval(iv);}el.textContent=Math.round(v);},28);});}});},{threshold:.5});
+io2.observe(sbox);
+
+var fill=document.getElementById('tlfill'),tl=document.getElementById('tl');
+function playTL(){var items=[].slice.call(tl.querySelectorAll('.tl-item')),H=tl.clientHeight-16,p=0;items.forEach(function(it){it.classList.remove('on','now');});fill.style.height='0px';var iv=setInterval(function(){p+=1.0;if(p>100)p=100;fill.style.height=(H*p/100)+'px';items.forEach(function(it){var ip=+it.getAttribute('data-p');if(p>=ip)it.classList.add('on');it.classList.toggle('now',p>=ip&&p<ip+12);});if(p>=100){clearInterval(iv);items.forEach(function(it){it.classList.remove('now');});}},42);}
+var tlstart=false,io3=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!tlstart){tlstart=true;setTimeout(playTL,300);}});},{threshold:.3});
+io3.observe(tl);
+var rep=document.getElementById('replay');if(rep)rep.addEventListener('click',playTL);
+
+var flash=document.getElementById('flash');
+window.addEventListener('pointermove',function(e){flash.style.setProperty('--mx',e.clientX+'px');flash.style.setProperty('--my',e.clientY+'px');});
+document.querySelectorAll('.spot').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--cx',(e.clientX-r.left)+'px');c.style.setProperty('--cy',(e.clientY-r.top)+'px');});});
+var hero=document.getElementById('hero');
+hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;['b1','b2','b3'].forEach(function(id,k){var f=(k+1)*16,b=document.getElementById(id);if(b){b.style.marginLeft=(x*f)+'px';b.style.marginTop=(y*f)+'px';}});});
+window.addEventListener('message',function(e){if(typeof e.data==='string'&&e.data.indexOf('setHeight')===0){var h=parseInt(e.data.split(':')[1],10);if(h)document.getElementById('jotform').style.height=h+'px';}});
+}catch(err){document.documentElement.className='nojs';}
+})();
+</script>
+</body>
+</html>
